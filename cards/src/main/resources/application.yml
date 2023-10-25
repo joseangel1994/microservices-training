@@ -14,3 +14,23 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+# Alternative to put the profile on the running configuration
+#  config:
+#    import:
+#      - "application-qa.yml"
+#      - "application-prod.yml"
+#  profiles:
+#    active:
+#      - "qa"
+
+build:
+  version: "3.0"
+
+cards:
+  message: "Welcome to MicroservicesBank cards related local APIs"
+  contactDetails:
+    name: "John Doe - Developer"
+    email: "john@microservices.com"
+  onCallSupport:
+    - (111) 111-1234
+    - (111) 111-1235

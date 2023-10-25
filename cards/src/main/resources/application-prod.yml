@@ -1,0 +1,16 @@
+#spring:
+#  config:
+#    activate:
+#      on-profile: "prod"
+
+build:
+  version: "1.0"
+
+cards:
+  message: "Welcome to MicroservicesBank cards related Prod APIs"
+  contactDetails:
+    name: "Jeff - Team Lead"
+    email: "jeff@microservices.com"
+  onCallSupport:
+    - (333) 333-1234
+    - (333) 333-1235

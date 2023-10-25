@@ -1,0 +1,16 @@
+#spring:
+#  config:
+#    activate:
+#      on-profile: "qa"
+
+build:
+  version: "2.0"
+
+accounts:
+  message: "Welcome to MicroservicesBank accounts related QA APIs"
+  contactDetails:
+    name: "Alice - QA Lead"
+    email: "alice@microservices.com"
+  onCallSupport:
+    - (666) 666-1234
+    - (666) 666-1235
