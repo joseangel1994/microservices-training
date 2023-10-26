@@ -1,0 +1,16 @@
+#spring:
+#  config:
+#    activate:
+#      on-profile: "prod"
+
+build:
+  version: "1.0"
+
+loans:
+  message: "Welcome to MicroservicesBank loans related Prod APIs"
+  contactDetails:
+    name: "Jeff - Team Lead"
+    email: "jeff@microservices.com"
+  onCallSupport:
+    - (444) 444-1234
+    - (444) 444-1235

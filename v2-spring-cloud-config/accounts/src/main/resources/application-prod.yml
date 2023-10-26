@@ -1,0 +1,16 @@
+#spring:
+#  config:
+#    activate:
+#      on-profile: "prod"
+
+build:
+  version: "1.0"
+
+accounts:
+  message: "Welcome to MicroservicesBank accounts related Prod APIs"
+  contactDetails:
+    name: "Jeff - Team Lead"
+    email: "jeff@microservices.com"
+  onCallSupport:
+    - (777) 777-1234
+    - (777) 777-1235
