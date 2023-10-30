@@ -1,6 +1,10 @@
 server:
   port: 9000
 spring:
+  application:
+    name: "cards"
+  profiles:
+    active: "prod"
   datasource:
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
@@ -14,23 +18,10 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-# Alternative to put the profile on the running configuration
-#  config:
-#    import:
-#      - "application-qa.yml"
-#      - "application-prod.yml"
-#  profiles:
-#    active:
-#      - "qa"
-
-build:
-  version: "3.0"
-
-cards:
-  message: "Welcome to MicroservicesBank cards related local APIs"
-  contactDetails:
-    name: "John Doe - Developer"
-    email: "john@microservices.com"
-  onCallSupport:
-    - (111) 111-1234
-    - (111) 111-1235
+  config:
+    import: "optional:configserver:http://localhost:8071/"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

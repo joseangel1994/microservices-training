@@ -1,2 +1,26 @@
+spring:
+  application:
+    name: "configserver"
+  profiles:
+    active: native #For classpath and files config locations
+#   active: git # For git repositories
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: "classpath:/config"
+#         search-locations: "file:///Users//jex//...//config"
+# Most recommended way
+#        git:
+#          uri: "git repo link"
+#          default-label: main #default git branch name
+#          timeout: 5
+#          clone-on-start: true #clone to local repo on startup
+#          force-pull: true #override local changes when restarting config-server
+
+encrypt:
+  key: "aYk424btWbME"
+
 server:
   port: 8071
+

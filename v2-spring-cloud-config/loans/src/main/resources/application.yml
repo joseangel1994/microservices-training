@@ -1,6 +1,10 @@
 server:
   port: 8090
 spring:
+  application:
+    name: "loans"
+  profiles:
+    active: "prod"
   datasource:
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
@@ -14,23 +18,10 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-# Alternative to put the profile on the running configuration
-#  config:
-#    import:
-#      - "application-qa.yml"
-#      - "application-prod.yml"
-#  profiles:
-#    active:
-#      - "qa"
-
-build:
-  version: "3.0"
-
-loans:
-  message: "Welcome to MicroservicesBank loans related local APIs"
-  contactDetails:
-    name: "John Doe - Developer"
-    email: "john@microservices.com"
-  onCallSupport:
-    - (555) 555-1234
-    - (555) 555-1235
+  config:
+    import: "optional:configserver:http://localhost:8071/"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
