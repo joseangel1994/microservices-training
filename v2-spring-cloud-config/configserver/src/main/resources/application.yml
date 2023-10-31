@@ -2,21 +2,26 @@ spring:
   application:
     name: "configserver"
   profiles:
-    active: native #For classpath and files config locations
-#   active: git # For git repositories
+#    active: native #For classpath and files config locations
+    active: git # For git repositories
   cloud:
     config:
       server:
-        native:
-          search-locations: "classpath:/config"
+#        native:
+#          search-locations: "classpath:/config"
 #         search-locations: "file:///Users//jex//...//config"
 # Most recommended way
-#        git:
-#          uri: "git repo link"
-#          default-label: main #default git branch name
-#          timeout: 5
-#          clone-on-start: true #clone to local repo on startup
-#          force-pull: true #override local changes when restarting config-server
+        git:
+          uri: "https://github.com/joseangel1994/microservices-training-config.git"
+          default-label: main #default git branch name
+          timeout: 5
+          clone-on-start: true #clone to local repo on startup
+          force-pull: true #override local changes when restarting config-server
+  rabbitmq:
+    host: "localhost"
+    port: 5672
+    username: "guest"
+    password: "guest"
 
 encrypt:
   key: "aYk424btWbME"
