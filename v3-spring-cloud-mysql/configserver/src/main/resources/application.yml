@@ -17,11 +17,6 @@ spring:
           timeout: 5
           clone-on-start: true #clone to local repo on startup
           force-pull: true #override local changes when restarting config-server
-  rabbitmq:
-    host: "localhost"
-    port: 5672
-    username: "guest"
-    password: "guest"
 
 management:
   endpoints:
