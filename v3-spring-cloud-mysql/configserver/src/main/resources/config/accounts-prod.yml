@@ -1,0 +1,11 @@
+build:
+  version: "1.0"
+
+accounts:
+  message: "Welcome to MicroservicesBank accounts related Production APIs"
+  contactDetails:
+    name: "Jeff - Team Lead"
+    email: "{cipher}481fbffaf7bbbc40a01cd98c84dd1166698b6555244befe4a197518d5c8f0123711b886b5a2861e33f0c7b2468408e4e"
+  onCallSupport:
+    - (777) 777-1234
+    - (777) 777-1235

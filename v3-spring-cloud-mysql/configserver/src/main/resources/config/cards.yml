@@ -1,0 +1,11 @@
+build:
+  version: "3.0"
+
+cards:
+  message: "Welcome to MicroservicesBank cards related local APIs"
+  contactDetails:
+    name: "John Doe - Developer"
+    email: "john@microservices.com"
+  onCallSupport:
+    - (111) 111-1234
+    - (111) 111-1235
