@@ -51,7 +51,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<image>
-						<name>jaexposito/${project.artifactId}:s6</name>
+						<name>jaexposito/${project.artifactId}:s7</name>
 					</image>
 					<excludes>
 						<exclude>

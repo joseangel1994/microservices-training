@@ -2,6 +2,7 @@ package com.microservices.accounts.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Getter
@@ -12,8 +13,8 @@ import lombok.*;
 public class Customer extends BaseEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "customer_id")
     private Long customerId;
 
     @Column
